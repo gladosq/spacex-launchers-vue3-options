@@ -1,0 +1,55 @@
+<script setup>
+import Logo from '../../common/UI/Logo.vue';
+</script>
+
+<template>
+  <section class='main-title'>
+    <h1>Успешные космические миссии</h1>
+    <Logo/>
+    <h2>За 2015-2019</h2>
+  </section>
+
+</template>
+
+<style scoped lang='scss'>
+.main-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  h1 {
+    font-size: 44px;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-top: 100px;
+    text-align: center;
+
+    @media (max-width: $tablet-width) {
+      margin-top: 30px;
+      font-size: 28px;
+    }
+  }
+
+  h2 {
+    font-weight: 400;
+    font-size: 26px;
+    margin-top: 30px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+
+  svg {
+    @media (max-width: $mobile-width) {
+      width: 220px;
+    }
+  }
+}
+</style>
