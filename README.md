@@ -1,6 +1,6 @@
 ## SpaceX Launchers - VUE APP
 
-### Деплой - https://spacex-launces-promo.netlify.app/
+### Деплой - https://spacex-launchers-vue3-options.netlify.app/
 
 #### Необходимые компоненты для запуска:
 - [x] [Node.js](https://nodejs.org/)
