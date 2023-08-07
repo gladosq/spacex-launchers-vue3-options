@@ -3,37 +3,38 @@ import CorrectArrow from '../../common/UI/Icons/CorrectArrow.vue';
 import dayjs from 'dayjs';
 
 export default {
-  methods: {dayjs},
-  components: {CorrectArrow},
+
+  components: { CorrectArrow },
   props: {
     data: {
       type: Object,
-      required: true
-    }
-  }
-}
+      required: true,
+    },
+  },
+  methods: { dayjs },
+};
 
 </script>
 
 <template>
   <li class='item'>
-    <a class='item__link' :href='`${data.id}`'>
+    <a class='item__link' :href='`#${data.id}`'>
       <div class='item__image-wrapper'>
         <img
           class='item__rocket-image'
-          :src='`${data.links.patch.small}`'
+          :src='data.links.patch.small'
           alt='Launch logo'
         />
       </div>
       <div class='item__inner-wrapper'>
         <h3>{{ data.name }}</h3>
         <div class='item__caption'>
-          <CorrectArrow/>
+          <CorrectArrow />
           <span>Успешный запуск</span>
         </div>
       </div>
       <div class='item__date'>
-        {{dayjs(data.date_local).format('DD.MM.YYYY')}}
+        {{ dayjs(data.date_local).format('DD.MM.YYYY') }}
       </div>
     </a>
   </li>

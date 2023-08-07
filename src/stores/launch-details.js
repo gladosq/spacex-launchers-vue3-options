@@ -12,7 +12,7 @@ const useLaunchStore = defineStore('launchStore', {
     async getLaunch(launchId) {
       this.isLoading = true;
       await axios
-        .get(`${LAUNCHES_API['LAUNCH_DETAILS']}/${launchId}`)
+        .get(`${LAUNCHES_API['launchDetails']}/${launchId}`)
         .then(response => {
           this.launch = response.data;
           /*--- Получаем id ракеты и делаем запрос на получение
@@ -25,7 +25,7 @@ const useLaunchStore = defineStore('launchStore', {
     },
     async getRocket(rocketId) {
       await axios
-        .get(`${LAUNCHES_API['ROCKET']}/${rocketId}`)
+        .get(`${LAUNCHES_API['rocket']}/${rocketId}`)
         .then(response => {
           this.rocket = response.data;
         })

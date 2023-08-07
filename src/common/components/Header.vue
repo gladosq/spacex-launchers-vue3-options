@@ -3,17 +3,17 @@ import Logo from '../UI/Logo.vue';
 import BackPageIcon from '../UI/Icons/BackPageIcon.vue';
 
 export default {
-  components: {Logo, BackPageIcon}
-}
+  components: { Logo, BackPageIcon },
+};
 </script>
 
 <template>
   <section class='header'>
     <div class='header__logo'>
-      <Logo/>
+      <Logo />
     </div>
     <a href='/' class='header__link'>
-      <BackPageIcon/>
+      <BackPageIcon />
       <span>Вернуться на главную</span>
     </a>
   </section>

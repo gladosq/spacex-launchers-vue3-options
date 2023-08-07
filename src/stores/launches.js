@@ -9,7 +9,7 @@ import {sortByAsc, sortByDesc} from '../common/helpers.js';
 const useLaunchesStore = defineStore('launchesStore', {
   state: () => ({
     isLoading: false,
-    activeSorting: SORTING['DESC'],
+    activeSorting: SORTING['Desc'],
     launches: []
   }),
   getters: {
@@ -21,7 +21,7 @@ const useLaunchesStore = defineStore('launchesStore', {
     async getLaunches() {
       this.isLoading = true;
       const res = await axios
-        .get(LAUNCHES_API['LAUNCHES_LIST'])
+        .get(LAUNCHES_API['launchesList'])
         .then(response => {
           this.filterLaunchesByInterval(response.data);
         })
@@ -42,11 +42,11 @@ const useLaunchesStore = defineStore('launchesStore', {
     },
     /*--- Сортировка значений из стора по выбранному фильтру ---*/
     sortLaunches(type) {
-      if (type === SORTING['ASC']) {
-        this.activeSorting = SORTING['ASC'];
+      if (type === SORTING['Asc']) {
+        this.activeSorting = SORTING['Asc'];
         this.launches.sort(sortByAsc);
       } else {
-        this.activeSorting = SORTING['DESC'];
+        this.activeSorting = SORTING['Desc'];
         this.launches.sort(sortByDesc);
       }
     }

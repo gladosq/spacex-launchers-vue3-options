@@ -1,7 +1,10 @@
-import {createMemoryHistory, createRouter} from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router';
 import routes from './routes';
 
 export const router = createRouter({
-  history: createMemoryHistory(),
+  history: createWebHashHistory(),
   routes,
+  scrollBehavior() {
+    document.getElementById('app').scrollIntoView({ behavior: 'smooth' });
+  },
 });
